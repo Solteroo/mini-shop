@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joke Generator - Random Jokes API</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>😂 Joke Generator</h1>
+            <p>Get random jokes powered by JokeAPI</p>
+            <button id="themeToggle" class="theme-toggle" title="Toggle dark mode">
+                🌙
+            </button>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <!-- Controls -->
+            <div class="controls">
+                <div class="control-group">
+                    <label for="category">Select Category:</label>
+                    <select id="category">
+                        <option value="Any">Any (Random)</option>
+                        <option value="General">General</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Knock-Knock">Knock-Knock</option>
+                    </select>
+                </div>
+
+                <button id="getJokeBtn" class="btn btn-primary">
+                    <span class="btn-icon">🎭</span>
+                    Get Joke
+                </button>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading joke...</p>
+            </div>
+
+            <!-- Error State -->
+            <div id="error" class="error hidden">
+                <p id="errorMessage"></p>
+            </div>
+
+            <!-- Joke Display -->
+            <div id="jokeContainer" class="joke-container hidden">
+                <div class="joke-card">
+                    <div id="jokeContent" class="joke-content">
+                        <!-- Joke will be displayed here -->
+                    </div>
+                </div>
+
+                <!-- Joke Actions -->
+                <div class="joke-actions">
+                    <button id="copyBtn" class="btn btn-secondary" title="Copy joke">
+                        📋 Copy
+                    </button>
+                    <button id="shareTwitterBtn" class="btn btn-secondary" title="Share on Twitter">
+                        𝕏 Share
+                    </button>
+                    <button id="getJokeBtn2" class="btn btn-primary">
+                        🎭 Next Joke
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Powered by <a href="https://jokeapi.dev/" target="_blank">JokeAPI</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
